@@ -1,7 +1,5 @@
 import unittest
-
 from bmi.bmi import Bmi
-
 
 class TestHello(unittest.TestCase):
     def test_hello(self):
