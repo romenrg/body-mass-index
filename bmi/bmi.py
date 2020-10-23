@@ -1,4 +1,30 @@
 class Bmi:
+    ranges_i18n = {
+        0: {
+            "en": "Underweight",
+            "es": "Bajo peso"
+        },
+        1: {
+            "en": "Healthy",
+            "es": "Peso saludable"
+        },
+        2: {
+            "en": "Overweight",
+            "es": "Sobrepeso"
+        },
+        3: {
+            "en": "Obese | Class I",
+            "es": "Obesidad | Clase I"
+        },
+        4: {
+            "en": "Obese | Class II",
+            "es": "Obesidad | Clase II"
+        },
+        5: {
+            "en": "Obese | Class III",
+            "es": "Obesidad | Clase III"
+        }
+    }
     def hello(self):
         return "This util calculates the Body Mass Index"
 
@@ -9,18 +35,18 @@ class Bmi:
         print("Exact value: "+ str(exact_value) + "; Rounded value: "+ str(rounded_value))
         return rounded_value
 
-    @staticmethod
-    def range(bmi):
+    @classmethod
+    def range(cls, bmi, lang="en"):
         if bmi < 18.5:
-            return "Underweight"
+            return cls.ranges_i18n[0][lang]
         elif (bmi >= 18.5) and (bmi < 24.9):
-            return "Healthy"
+            return cls.ranges_i18n[1][lang]
         elif (bmi >= 25) and (bmi < 29.9):
-            return "Overweight"
+            return cls.ranges_i18n[2][lang]
         elif (bmi >= 30) and (bmi < 34.9):
-            return "Obese | Class I"
+            return cls.ranges_i18n[3][lang]
         elif (bmi >= 35) and (bmi < 39.9):
-            return "Obese | Class II"
+            return cls.ranges_i18n[4][lang]
         else:
-            return "Obese | Class III"
+            return cls.ranges_i18n[5][lang]
 
