@@ -27,3 +27,6 @@ class TestHello(unittest.TestCase):
         self.assertEqual(Bmi.range(36), "Obese | Class II")
     def test_range_obese3(self):
         self.assertEqual(Bmi.range(46), "Obese | Class III")
+
+    def test_range_under_lang(self):
+        self.assertEqual(Bmi.range(17, "es"), "Bajo peso")
