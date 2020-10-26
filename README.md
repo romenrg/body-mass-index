@@ -7,4 +7,4 @@
 ## Running the program
 
 ### As a Python module
-`python3 -m bmi.bmi`
+`python3 -m bmi`
