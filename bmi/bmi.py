@@ -50,3 +50,8 @@ class Bmi:
         else:
             return cls.ranges_i18n[5][lang]
 
+    @classmethod
+    def complete_info(cls, weight_kg, height_m, lang="en"):
+        bmi = cls.calculate(weight_kg, height_m)
+        range = cls.range(bmi, lang)
+        return bmi, range
