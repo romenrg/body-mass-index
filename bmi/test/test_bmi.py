@@ -30,3 +30,8 @@ class TestHello(unittest.TestCase):
 
     def test_range_under_lang(self):
         self.assertEqual(Bmi.range(17, "es"), "Bajo peso")
+
+    def test_complete(self):
+        self.assertEqual(Bmi.complete_info(80, 1.80), (24.7, "Healthy"))
+    def test_complete_lang(self):
+        self.assertEqual(Bmi.complete_info(80, 1.80, "es"), (24.7, "Peso saludable"))
