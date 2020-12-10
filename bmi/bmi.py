@@ -1,4 +1,11 @@
 class Bmi:
+    ranges = {
+        0: 18.5,
+        1: 25,
+        2: 30,
+        3: 35,
+        4: 40
+    }
     ranges_i18n = {
         0: {
             "en": "Underweight",
@@ -39,13 +46,13 @@ class Bmi:
     def range(cls, bmi, lang="en"):
         if bmi < 18.5:
             return cls.ranges_i18n[0][lang]
-        elif (bmi >= 18.5) and (bmi < 24.9):
+        elif (bmi >= cls.ranges[0]) and (bmi < cls.ranges[1]):
             return cls.ranges_i18n[1][lang]
-        elif (bmi >= 25) and (bmi < 29.9):
+        elif (bmi >= cls.ranges[1]) and (bmi < cls.ranges[2]):
             return cls.ranges_i18n[2][lang]
-        elif (bmi >= 30) and (bmi < 34.9):
+        elif (bmi >= cls.ranges[2]) and (bmi < cls.ranges[3]):
             return cls.ranges_i18n[3][lang]
-        elif (bmi >= 35) and (bmi < 39.9):
+        elif (bmi >= cls.ranges[3]) and (bmi < cls.ranges[4]):
             return cls.ranges_i18n[4][lang]
         else:
             return cls.ranges_i18n[5][lang]
