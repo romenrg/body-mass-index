@@ -62,3 +62,23 @@ class Bmi:
         bmi = cls.calculate(weight_kg, height_m)
         range = cls.range(bmi, lang)
         return bmi, range
+
+    @staticmethod
+    def calculaute_weight(height_m, bmi):
+        weight = bmi * pow(height_m, 2)
+        rounded_weight = round(weight, 1)
+        # print("Exact value weight: "+ str(weight) + "; Rounded value weight: "+ str(rounded_weight))
+        # print("Height: "+ str(height_m) + "; bmi: "+ str(bmi))
+        return rounded_weight
+
+    @classmethod
+    def your_weight_boundaries(cls, height_m):
+        weight_per_range = [
+            cls.calculaute_weight(height_m, cls.ranges[0]),
+            cls.calculaute_weight(height_m, cls.ranges[1]),
+            cls.calculaute_weight(height_m, cls.ranges[2]),
+            cls.calculaute_weight(height_m, cls.ranges[3]),
+            cls.calculaute_weight(height_m, cls.ranges[4])
+        ]
+        return weight_per_range
+

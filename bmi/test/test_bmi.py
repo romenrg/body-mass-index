@@ -35,3 +35,6 @@ class TestHello(unittest.TestCase):
         self.assertEqual(Bmi.complete_info(80, 1.80), (24.7, "Healthy"))
     def test_complete_lang(self):
         self.assertEqual(Bmi.complete_info(80, 1.80, "es"), (24.7, "Peso saludable"))
+
+    def test_your_weight_boundaries(self):
+        self.assertEqual(Bmi.your_weight_boundaries(1.80), [59.9, 81, 97.2, 113.4, 129.6])
