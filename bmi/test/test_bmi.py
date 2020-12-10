@@ -31,10 +31,10 @@ class TestHello(unittest.TestCase):
     def test_range_under_lang(self):
         self.assertEqual(Bmi.range(17, "es"), "Bajo peso")
 
-    def test_calculate_bmi_with_range_info(self):
-        self.assertEqual(Bmi.calculate_bmi_with_range_info(80, 1.80), (24.7, "Healthy"))
-    def test_calculate_bmi_with_range_info_lang(self):
-        self.assertEqual(Bmi.calculate_bmi_with_range_info(80, 1.80, "es"), (24.7, "Peso saludable"))
+    def test_calculate_bmi_with_info(self):
+        self.assertEqual(Bmi.calculate_bmi_with_info(80, 1.80), (24.7, "Healthy"))
+    def test_calculate_bmi_with_info_lang(self):
+        self.assertEqual(Bmi.calculate_bmi_with_info(80, 1.80, "es"), (24.7, "Peso saludable"))
 
     def test_your_weight_boundaries(self):
         self.assertEqual(Bmi.your_weight_boundaries(1.80), [59.9, 81, 97.2, 113.4, 129.6])

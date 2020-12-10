@@ -58,7 +58,7 @@ class Bmi:
             return cls.ranges_i18n[5][lang]
 
     @classmethod
-    def calculate_bmi_with_range_info(cls, weight_kg, height_m, lang="en"):
+    def calculate_bmi_with_info(cls, weight_kg, height_m, lang="en"):
         bmi = cls.calculate(weight_kg, height_m)
         range = cls.range(bmi, lang)
         return bmi, range
