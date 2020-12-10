@@ -35,6 +35,8 @@ class TestHello(unittest.TestCase):
             {'From': 40, 'To': "", 'Info': 'Obese | Class III'},
         ])
 
+    # TODO: ranges_with_info_lang
+
     def test_calculate_equal_80_180(self):
         self.assertEqual(Bmi.calculate(80, 1.80), 24.7, "Body Mass Index for 80kg and 1.80m is 24.7")
     def test_calculate_equal_64_164(self):
@@ -51,4 +53,8 @@ class TestHello(unittest.TestCase):
 
     def test_your_weight_boundaries(self):
         self.assertEqual(Bmi.your_weight_boundaries(1.80), [59.9, 81, 97.2, 113.4, 129.6])
+
+    # TODO: your_weight_boundaries_with_info
+
+    # TODO: your_weight_boundaries_with_info_lang
 
