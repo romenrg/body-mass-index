@@ -1,11 +1,11 @@
 class Bmi:
-    ranges = {
-        0: 18.5,
-        1: 25,
-        2: 30,
-        3: 35,
-        4: 40
-    }
+    ranges = [
+        18.5,
+        25,
+        30,
+        35,
+        40
+    ]
     ranges_i18n = {
         0: {
             "en": "Underweight",
