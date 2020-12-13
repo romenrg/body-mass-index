@@ -1,5 +1,6 @@
 import argparse
 import sys
+import pprint
 
 from bmi import Bmi
 
@@ -44,7 +45,12 @@ def cli():
     sub_cmd_ranges_w_info.set_defaults(func=execute_ranges_with_info)
     args = parser.parse_args()
     if subparserIsEnabled(args):
-        print(args.func(args))
+        result = args.func(args)
+        if isinstance(result, list):
+            pp = pprint.PrettyPrinter(indent=4)
+            pp.pprint(result)
+        else:
+            print(result)
     else:
         parser.print_help()
 
