@@ -8,3 +8,8 @@
 
 ### As a Python module
 `python3 -m bmi`
+
+### As a Docker container
+
+* First build it: `docker build --tag=romenrg/bmi:0.0.1 .`
+* Then run it: `docker run -it romenrg/bmi:0.0.1`
