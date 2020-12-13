@@ -35,9 +35,6 @@ class Bmi:
         }
     }
 
-    def hello(self):
-        return "This util calculates the Body Mass Index"
-
     @staticmethod
     def calculate(weight_kg, height_m):
         exact_value = weight_kg / pow(height_m, 2)
