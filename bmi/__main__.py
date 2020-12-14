@@ -25,6 +25,9 @@ def execute_ranges_with_info(args):
 def execute_calculate_weight(args):
     return Bmi.calculate_weight(args.height[0], args.bmi[0])
 
+def execute_healthy_weight(args):
+    return Bmi.your_healthy_weight(args.height[0])
+
 def subparserIsEnabled(args):
     return (len(sys.argv) > 1) and (hasattr(args, 'func'))
 
@@ -51,6 +54,10 @@ def cli():
     sub_cmd_calculate_weight.set_defaults(func=execute_calculate_weight)
     sub_cmd_calculate_weight.add_argument('height', metavar='height', type=float, nargs=1, help='height in meters (e.g. 1.80)')
     sub_cmd_calculate_weight.add_argument('bmi', metavar='bmi', type=float, nargs=1, help='Body Mass Index (BMI) value (e.g. 22)')
+
+    sub_cmd_healthy_weight = subparsers.add_parser('healthy_weight', help='Show healthy weight range, providing height')
+    sub_cmd_healthy_weight.set_defaults(func=execute_healthy_weight)
+    sub_cmd_healthy_weight.add_argument('height', metavar='height', type=float, nargs=1, help='height in meters (e.g. 1.80)')
     args = parser.parse_args()
     if subparserIsEnabled(args):
         result = args.func(args)

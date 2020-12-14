@@ -93,3 +93,6 @@ class Bmi:
         ]
         return weight_per_range
 
+    @classmethod
+    def your_healthy_weight(cls, height_m):
+        return (cls.your_weight_boundaries(height_m))[0:2]
