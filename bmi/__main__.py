@@ -26,7 +26,7 @@ def execute_calculate_weight(args):
     return Bmi.calculate_weight(args.height[0], args.bmi[0])
 
 def execute_healthy_weight(args):
-    return Bmi.your_healthy_weight(args.height[0])
+    return Bmi.calculate_healthy_weight(args.height[0])
 
 def subparserIsEnabled(args):
     return (len(sys.argv) > 1) and (hasattr(args, 'func'))

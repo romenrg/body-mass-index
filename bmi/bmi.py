@@ -83,7 +83,7 @@ class Bmi:
         return rounded_weight
 
     @classmethod
-    def your_weight_boundaries(cls, height_m):
+    def calculate_weight_boundaries(cls, height_m):
         weight_per_range = [
             cls.calculate_weight(height_m, cls.boundaries[1]),
             cls.calculate_weight(height_m, cls.boundaries[2]),
@@ -94,5 +94,5 @@ class Bmi:
         return weight_per_range
 
     @classmethod
-    def your_healthy_weight(cls, height_m):
-        return (cls.your_weight_boundaries(height_m))[0:2]
+    def calculate_healthy_weight(cls, height_m):
+        return (cls.calculate_weight_boundaries(height_m))[0:2]
