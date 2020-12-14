@@ -20,7 +20,7 @@ def execute_range_info(args):
         return Bmi.range_info(args.bmi[0])
 
 def execute_ranges_with_info(args):
-    return Bmi.ranges_with_info()
+    return Bmi.ranges_with_info(args.lang)
 
 def execute_calculate_weight(args):
     return Bmi.calculate_weight(args.height[0], args.bmi[0])
@@ -45,6 +45,7 @@ def cli():
     sub_cmd_range_info.add_argument('bmi', metavar='bmi', type=int, nargs=1, help='Body Mass Index (BMI) value (e.g. 22)')
     sub_cmd_range_info.add_argument('--lang', metavar='lang', type=str, nargs='?', default='en', help='language <"en" (default) or "es">')
     sub_cmd_ranges_w_info = subparsers.add_parser('ranges_info_all', help='Return info of all ranges')
+    sub_cmd_ranges_w_info.add_argument('--lang', metavar='lang', type=str, nargs='?', default='en', help='language <"en" (default) or "es">')
     sub_cmd_ranges_w_info.set_defaults(func=execute_ranges_with_info)
     sub_cmd_calculate_weight = subparsers.add_parser('calculate_weight', help='Calculate, providing height and BMI')
     sub_cmd_calculate_weight.set_defaults(func=execute_calculate_weight)

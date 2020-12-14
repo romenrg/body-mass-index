@@ -58,14 +58,14 @@ class Bmi:
             return cls.ranges_i18n[5][lang]
 
     @classmethod
-    def ranges_with_info(self):
+    def ranges_with_info(self, lang="en"):
         detailed_ranges = []
         for i, boundary in enumerate(self.boundaries):
             if i + 1 < len(self.boundaries):
-                detailed_ranges.append({"From": boundary, "To": self.boundaries[i + 1], "Info": self.range_info(boundary)})
+                detailed_ranges.append({"From": boundary, "To": self.boundaries[i + 1], "Info": self.range_info(boundary, lang)})
                 # print("From: " + str(boundary) + "; To: "+ str(self.ranges[i + 1]) + "; Info: "+ str(self.boundary(boundary)))
             else:
-                detailed_ranges.append({"From": boundary, "To": "", "Info": self.range_info(boundary)})
+                detailed_ranges.append({"From": boundary, "To": "", "Info": self.range_info(boundary, lang)})
         return detailed_ranges
 
     @classmethod

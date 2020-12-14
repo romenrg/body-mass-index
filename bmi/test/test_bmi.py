@@ -31,6 +31,16 @@ class TestHello(unittest.TestCase):
             {'From': 40, 'To': "", 'Info': 'Obese | Class III'},
         ])
 
+    def test_ranges_with_info_lang(self):
+        self.assertEqual(Bmi.ranges_with_info("es"), [
+            {'From': 0, 'To': 18.5, 'Info': 'Bajo peso'},
+            {'From': 18.5, 'To': 25, 'Info': 'Peso saludable'},
+            {'From': 25, 'To': 30, 'Info': 'Sobrepeso'},
+            {'From': 30, 'To': 35, 'Info': 'Obesidad | Clase I'},
+            {'From': 35, 'To': 40, 'Info': 'Obesidad | Clase II'},
+            {'From': 40, 'To': "", 'Info': 'Obesidad | Clase III'},
+        ])
+
     # TODO: ranges_with_info_lang
 
     def test_calculate_equal_80_180(self):
