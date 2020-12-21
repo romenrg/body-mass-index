@@ -1,4 +1,5 @@
 import argparse
+import gettext
 import sys
 import pprint
 
@@ -71,4 +72,14 @@ def cli():
 
 
 # Start CLI
+# gettext.bindtextdomain('myapplication', str(path.dirname(path.realpath(__file__)))+'/locale/en/directory')
+# gettext.textdomain('myapplication')
+_ = gettext.gettext
+
+es = gettext.translation('base', localedir='bmi/locales', languages=['es'])
+es.install()
+_ = es.gettext
+
+
+print(_('This is a translatable string.'))
 cli()
