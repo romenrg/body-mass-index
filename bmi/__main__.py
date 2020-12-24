@@ -25,6 +25,9 @@ def execute_ranges_with_info(args):
 def execute_calculate_weight(args):
     return Bmi.calculate_weight(args.height[0], args.bmi[0])
 
+def execute_weight_ranges(args):
+    return Bmi.calculate_weight_ranges_with_info(args.height[0], args.lang)
+
 def execute_healthy_weight(args):
     return Bmi.calculate_healthy_weight(args.height[0])
 
@@ -50,11 +53,14 @@ def cli():
     sub_cmd_ranges_w_info = subparsers.add_parser('ranges_info', help='Return info of all ranges')
     sub_cmd_ranges_w_info.add_argument('--lang', metavar='lang', type=str, nargs='?', default='en', help='language <"en" (default) or "es">')
     sub_cmd_ranges_w_info.set_defaults(func=execute_ranges_with_info)
-    sub_cmd_calculate_weight = subparsers.add_parser('calculate_weight', help='Calculate, providing height and BMI')
+    sub_cmd_calculate_weight = subparsers.add_parser('calculate_weight', help='Calculate weight, providing height and BMI')
     sub_cmd_calculate_weight.set_defaults(func=execute_calculate_weight)
     sub_cmd_calculate_weight.add_argument('height', metavar='height', type=float, nargs=1, help='height in meters (e.g. 1.80)')
     sub_cmd_calculate_weight.add_argument('bmi', metavar='bmi', type=float, nargs=1, help='Body Mass Index (BMI) value (e.g. 22)')
-
+    sub_cmd_weight_ranges = subparsers.add_parser('weight_ranges', help='Calculate weight ranges, providing height')
+    sub_cmd_weight_ranges.set_defaults(func=execute_weight_ranges)
+    sub_cmd_weight_ranges.add_argument('height', metavar='height', type=float, nargs=1, help='height in meters (e.g. 1.80)')
+    sub_cmd_weight_ranges.add_argument('--lang', metavar='lang', type=str, nargs='?', default='en', help='language <"en" (default) or "es">')
     sub_cmd_healthy_weight = subparsers.add_parser('healthy_weight', help='Show healthy weight range, providing height')
     sub_cmd_healthy_weight.set_defaults(func=execute_healthy_weight)
     sub_cmd_healthy_weight.add_argument('height', metavar='height', type=float, nargs=1, help='height in meters (e.g. 1.80)')
