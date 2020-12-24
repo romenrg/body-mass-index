@@ -43,11 +43,17 @@ class Bmi:
     }
 
     @staticmethod
-    def calculate(weight_kg, height_m):
+    def calculate_bmi(weight_kg, height_m):
         exact_value = weight_kg / pow(height_m, 2)
         rounded_value = round(exact_value, 1)
         logger.debug("Calculated BMI: Exact value: "+ str(exact_value) + "; Rounded value: "+ str(rounded_value))
         return rounded_value
+
+    @classmethod
+    def calculate_bmi_with_info(cls, weight_kg, height_m, lang="en"):
+        bmi = cls.calculate_bmi(weight_kg, height_m)
+        range = cls.range_info(bmi, lang)
+        return bmi, range
 
     @classmethod
     def range_info(cls, bmi, lang="en"):
@@ -76,12 +82,6 @@ class Bmi:
                 detailed_ranges.append({"From": boundary, "To": "", "Info": self.range_info(boundary, lang)})
                 logger.debug("From: " + str(boundary) + "; To: " + "; Info: "+ self.range_info(boundary, lang))
         return detailed_ranges
-
-    @classmethod
-    def calculate_bmi_with_info(cls, weight_kg, height_m, lang="en"):
-        bmi = cls.calculate(weight_kg, height_m)
-        range = cls.range_info(bmi, lang)
-        return bmi, range
 
     @staticmethod
     def calculate_weight(height_m, bmi):
