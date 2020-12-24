@@ -71,16 +71,16 @@ class Bmi:
             return cls.ranges_i18n[5][lang]
 
     @classmethod
-    def ranges_with_info(self, lang="en"):
+    def ranges_with_info(cls, lang="en"):
         detailed_ranges = []
         logger.debug("Ranges with information")
-        for i, boundary in enumerate(self.boundaries):
-            if i + 1 < len(self.boundaries):
-                detailed_ranges.append({"From": boundary, "To": self.boundaries[i + 1], "Info": self.range_info(boundary, lang)})
-                logger.debug("From: " + str(boundary) + "; To: "+ str(self.boundaries[i + 1]) + "; Info: "+ self.range_info(boundary, lang))
+        for i, boundary in enumerate(cls.boundaries):
+            if i + 1 < len(cls.boundaries):
+                detailed_ranges.append({"From": boundary, "To": cls.boundaries[i + 1], "Info": cls.range_info(boundary, lang)})
+                logger.debug("From: " + str(boundary) + "; To: "+ str(cls.boundaries[i + 1]) + "; Info: "+ cls.range_info(boundary, lang))
             else:
-                detailed_ranges.append({"From": boundary, "To": "", "Info": self.range_info(boundary, lang)})
-                logger.debug("From: " + str(boundary) + "; To: " + "; Info: "+ self.range_info(boundary, lang))
+                detailed_ranges.append({"From": boundary, "To": "", "Info": cls.range_info(boundary, lang)})
+                logger.debug("From: " + str(boundary) + "; To: " + "; Info: "+ cls.range_info(boundary, lang))
         return detailed_ranges
 
     @staticmethod
