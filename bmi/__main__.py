@@ -5,7 +5,7 @@ import pprint
 from bmi import Bmi
 
 def execute_calculate(args):
-    return Bmi.calculate(args.weight[0], args.height[0])
+    return Bmi.calculate_bmi(args.weight[0], args.height[0])
 
 def execute_calculate_bmi_with_info(args):
     if args.lang:
@@ -47,7 +47,7 @@ def cli():
     sub_cmd_range_info.set_defaults(func=execute_range_info)
     sub_cmd_range_info.add_argument('bmi', metavar='bmi', type=float, nargs=1, help='Body Mass Index (BMI) value (e.g. 22)')
     sub_cmd_range_info.add_argument('--lang', metavar='lang', type=str, nargs='?', default='en', help='language <"en" (default) or "es">')
-    sub_cmd_ranges_w_info = subparsers.add_parser('ranges_info_all', help='Return info of all ranges')
+    sub_cmd_ranges_w_info = subparsers.add_parser('ranges_info', help='Return info of all ranges')
     sub_cmd_ranges_w_info.add_argument('--lang', metavar='lang', type=str, nargs='?', default='en', help='language <"en" (default) or "es">')
     sub_cmd_ranges_w_info.set_defaults(func=execute_ranges_with_info)
     sub_cmd_calculate_weight = subparsers.add_parser('calculate_weight', help='Calculate, providing height and BMI')
