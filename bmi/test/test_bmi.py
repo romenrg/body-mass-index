@@ -58,7 +58,6 @@ class TestHello(unittest.TestCase):
     def test_calculate_weight_ranges(self):
         self.assertEqual(Bmi.calculate_weight_ranges(1.80), [0, 59.9, 81, 97.2, 113.4, 129.6])
 
-    # TODO: your_weight_boundaries_with_info
     def test_calculate_weight_ranges_with_info(self):
         self.assertEqual(Bmi.calculate_weight_ranges_with_info(1.80),  [
             {'From': 0, 'To': 59.9, 'Info': 'Underweight'},
@@ -69,7 +68,15 @@ class TestHello(unittest.TestCase):
             {'From': 129.6, 'To': "", 'Info': 'Obese | Class III'},
         ])
 
-    # TODO: your_weight_boundaries_with_info_lang
+    def test_calculate_weight_ranges_with_info_lang(self):
+        self.assertEqual(Bmi.calculate_weight_ranges_with_info(1.80, "es"),  [
+            {'From': 0, 'To': 59.9, 'Info': 'Bajo peso'},
+            {'From': 59.9, 'To': 81, 'Info': 'Peso saludable'},
+            {'From': 81, 'To': 97.2, 'Info': 'Sobrepeso'},
+            {'From': 97.2, 'To': 113.4, 'Info': 'Obesidad | Clase I'},
+            {'From': 113.4, 'To': 129.6, 'Info': 'Obesidad | Clase II'},
+            {'From': 129.6, 'To': "", 'Info': 'Obesidad | Clase III'},
+        ])
 
     def test_calculate_healthy_weight(self):
         self.assertEqual(Bmi.calculate_healthy_weight(1.80), [59.9, 81])
