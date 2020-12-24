@@ -28,7 +28,7 @@ def execute_calculate_weight(args):
 def execute_healthy_weight(args):
     return Bmi.calculate_healthy_weight(args.height[0])
 
-def subparserIsEnabled(args):
+def subparser_is_enabled(args):
     return (len(sys.argv) > 1) and (hasattr(args, 'func'))
 
 def cli():
@@ -59,7 +59,7 @@ def cli():
     sub_cmd_healthy_weight.set_defaults(func=execute_healthy_weight)
     sub_cmd_healthy_weight.add_argument('height', metavar='height', type=float, nargs=1, help='height in meters (e.g. 1.80)')
     args = parser.parse_args()
-    if subparserIsEnabled(args):
+    if subparser_is_enabled(args):
         result = args.func(args)
         if isinstance(result, list):
             pp = pprint.PrettyPrinter(indent=4)
