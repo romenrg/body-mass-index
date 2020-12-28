@@ -2,4 +2,5 @@ FROM python:3.7-alpine
 COPY . /bmi
 WORKDIR /bmi
 
-ENTRYPOINT python3 -m bmi "$0" "$@"
+ENTRYPOINT ["python3", "-m", "bmi"]
+CMD ["-h"]
