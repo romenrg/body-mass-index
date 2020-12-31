@@ -1,6 +1,6 @@
 # Calculates Body Mass Index
 [![Codeship Status for romenrg/body-mass-index](https://app.codeship.com/projects/e0077cc0-7641-43c1-9cb1-1b41646a852d/status?branch=master)](https://app.codeship.com/projects/422578)
-> Python module that providing Body Mass Index (BMI) utilities. Also providing a CLI. 
+> Python module that provides utilities related to calculating the Body Mass Index (BMI). Also provides a CLI. 
 
 ## Build
 
