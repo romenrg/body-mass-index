@@ -26,3 +26,7 @@
 Notes:
 * If no command is provided, help will be displayed
 * Example providing command with parameters `docker run -it romenrg/bmi:0.0.1 calculate 80 1.80`
+
+## Contribute
+
+Any contributions (i.e. PRs or issues) are welcome. Please feel free to propose changes following [the contributing guideline](CONTRIBUTING.md).
