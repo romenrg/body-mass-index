@@ -1,10 +1,16 @@
 # Contributing to this repository
 
-This page provides information about contributing code to this list of Evergreen Skills for Software Developers.
+This page provides information about contributing code to this repository.
 
-## Getting started
+The preferred way of contributing is by means of [Pull Requests](#pull-requests-creation-guidelines) (PRs), but if you cannot afford the time, [issues](https://github.com/romenrg/body-mass-index/issues) are also welcome, provided you follow the Code of Conduct as mentioned below.
 
-### Get your copy
+## Code of Conduct
+
+This project and everyone participating in it is governed by the following [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [contact@romenrg.com](mailto:contact@romenrg.com).
+
+## Pull Requests creation guidelines
+
+### First, get your copy
 
 * Fork the repository on GitHub.
 * Clone the forked repository to your machine.
@@ -12,7 +18,7 @@ This page provides information about contributing code to this list of Evergreen
 
 For more information, please refer to [GitHub's instructions on this](https://help.github.com/articles/fork-a-repo/).
 
-## Propose Changes
+### Then, propose Changes
 
 To submit changes:
  * Make sure your local copy is updated.
@@ -26,6 +32,3 @@ When your PR is submitted, some checks will automatically be run as part of a CI
 
 When your Pull Request is ready to be merged, the repository maintainers will integrate it and it will be published in the next release.
 
-## Code of Conduct
-
-This project and everyone participating in it is governed by the following [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [contact@romenrg.com](mailto:contact@romenrg.com).
