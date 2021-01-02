@@ -75,7 +75,8 @@ Notes:
 
 ## Source code usage
 
-You can also, clone the source repo in order to build a Docker image, run tests and/or contribute.
+You can also clone the repository in order to build a Docker image, run tests, execute the module locally and/or 
+contribute to keep improving this module.
 
 ### Build
 
@@ -96,9 +97,9 @@ Existing unit tests can be run in two different ways.
 
 ### Run
 
-You can run the module from sources in the same way you can once you have installed it. See [Run the module](#run-the-module)
+You can run the CLI from the source code in the same way you can when you installed it. See the [Run the CLI](#run-the-cli) section.
 
 
 ## Contribute
 
-Any contributions (i.e. PRs or issues) are welcome. Please feel free to propose changes following [the contributing guideline](CONTRIBUTING.md).
+Any contributions (i.e. PRs or issues) are welcome. Please feel free to propose changes following [the contributing guideline](https://github.com/romenrg/body-mass-index/blob/master/CONTRIBUTING.md).
