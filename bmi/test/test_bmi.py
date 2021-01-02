@@ -56,7 +56,7 @@ class TestHello(unittest.TestCase):
         self.assertEqual(Bmi.calculate_bmi_with_info(80, 1.80, "es"), (24.7, "Peso saludable"))
 
     def test_calculate_weight_ranges(self):
-        self.assertEqual(Bmi.calculate_weight_ranges(1.80), [0, 59.9, 81, 97.2, 113.4, 129.6])
+        self.assertEqual(Bmi.calculate_weight_boundaries(1.80), [0, 59.9, 81, 97.2, 113.4, 129.6])
 
     def test_calculate_weight_ranges_with_info(self):
         self.assertEqual(Bmi.calculate_weight_ranges_with_info(1.80),  [
