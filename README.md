@@ -2,11 +2,25 @@
 [![Codeship Status for romenrg/body-mass-index](https://app.codeship.com/projects/e0077cc0-7641-43c1-9cb1-1b41646a852d/status?branch=master)](https://app.codeship.com/projects/422578)
 > Python module that provides utilities related to calculating the Body Mass Index (BMI). Also provides a Command Line Interface (CLI). 
 
+## Table of contents
+
+- [Module usage](#module-usage)
+    - [Install & Import](#install--import)
+    - [Available functions](#available-functions)
+- [Standalone usage](#standalone-usage)
+    - [Run the CLI](#run-the-cli)
+    - [Available CLI commands](#available-cli-commands)
+- [Source code usage](#module-usage)
+    - [Build](#build)
+    - [Test](#test)
+    - [Run](#run)
+- [Contribute](#contribute)
+
 ## Module usage
 
 This library can be used from Python code, imported as a Python module.
 
-### Importing it
+### Install & Import
 
 In order to use this library:
  * Install it with pip (consider using pipfiles to keep track of your dependencies)
@@ -49,7 +63,7 @@ Notes:
 * If no command is provided, help will be displayed
 * Example providing command with parameters `docker run -it romenrg/bmi:0.0.1 calculate 80 1.80`
 
-#### Available CLI commands
+### Available CLI commands
 
 * `calculate_bmi`: Calculate BMI, provided weight (kg) and height (m) [info]
 * `get_bmi_range_info`: Return range info, provided BMI and language
@@ -83,6 +97,7 @@ Existing unit tests can be run in two different ways.
 ### Run
 
 You can run the module from sources in the same way you can once you have installed it. See [Run the module](#run-the-module)
+
 
 ## Contribute
 
