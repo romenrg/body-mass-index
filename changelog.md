@@ -18,7 +18,7 @@ This file keeps a log of version releases. This file is maintained
 
 ## Release Change History
 
-### [1.0.0] - 2020-12-26 (First release)
+### [1.0.0] - 2021-01-02 (First release, including module and CLI)
 
 #### Added
 
@@ -37,13 +37,12 @@ This file keeps a log of version releases. This file is maintained
         * `boundaries`: List with the boundaries for BMI ranges, as defined by the WHO
         * `ranges_i18n`: Text defining each BMI range, as per the WHO, in English and Spanish
 * CLI provides several commands:
-    * `calculate`: Calculate BMI, providing weight and height
-    * `calculate_info`: Calculate BMI with range info, providing weight, height and language
-    * `range_info`: Return range info, providing BMI and language
-    * `ranges_info`: Return info of all ranges
-    * `calculate_weight`: Calculate weight, providing height and BMI
-    * `weight_ranges`: Calculate weight ranges, providing height
-    * `healthy_weight`: Show healthy weight range, providing height
+    * `calculate_bmi`: Calculate BMI, provided weight (kg) and height (m) [info]
+    * `get_bmi_range_info`: Return range info, provided BMI and language
+    * `get_bmi_ranges_info`: Return info of all BMI ranges
+    * `calculate_weight`: Calculate weight (kg), provided height (m) and BMI
+    * `calculate_weight_ranges_info`: Calculate weight ranges (kg), based on BMI ranges; provided height (m)
+    * `calculate_healthy_weight`: Calculate healthy weight range (kg), provided height (m)
 
 #### Changed
 
