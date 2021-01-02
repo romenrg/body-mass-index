@@ -52,11 +52,11 @@ class Bmi:
     @classmethod
     def calculate_bmi_with_info(cls, weight_kg, height_m, lang="en"):
         bmi = cls.calculate_bmi(weight_kg, height_m)
-        range = cls.range_info(bmi, lang)
+        range = cls.get_bmi_range_info(bmi, lang)
         return bmi, range
 
     @classmethod
-    def range_info(cls, bmi, lang="en"):
+    def get_bmi_range_info(cls, bmi, lang="en"):
         if bmi < cls.boundaries[1]:
             return cls.ranges_i18n[0][lang]
         elif (bmi >= cls.boundaries[1]) and (bmi < cls.boundaries[2]):
@@ -71,16 +71,16 @@ class Bmi:
             return cls.ranges_i18n[5][lang]
 
     @classmethod
-    def ranges_with_info(cls, lang="en"):
+    def get_bmi_ranges_with_info(cls, lang="en"):
         detailed_ranges = []
         logger.debug("Ranges with information")
         for i, boundary in enumerate(cls.boundaries):
             if i + 1 < len(cls.boundaries):
-                detailed_ranges.append({"From": boundary, "To": cls.boundaries[i + 1], "Info": cls.range_info(boundary, lang)})
-                logger.debug("From: " + str(boundary) + "; To: "+ str(cls.boundaries[i + 1]) + "; Info: "+ cls.range_info(boundary, lang))
+                detailed_ranges.append({"From": boundary, "To": cls.boundaries[i + 1], "Info": cls.get_bmi_range_info(boundary, lang)})
+                logger.debug("From: " + str(boundary) + "; To: " + str(cls.boundaries[i + 1]) + "; Info: " + cls.get_bmi_range_info(boundary, lang))
             else:
-                detailed_ranges.append({"From": boundary, "To": "", "Info": cls.range_info(boundary, lang)})
-                logger.debug("From: " + str(boundary) + "; To: " + "; Info: "+ cls.range_info(boundary, lang))
+                detailed_ranges.append({"From": boundary, "To": "", "Info": cls.get_bmi_range_info(boundary, lang)})
+                logger.debug("From: " + str(boundary) + "; To: " + "; Info: " + cls.get_bmi_range_info(boundary, lang))
         return detailed_ranges
 
     @staticmethod
