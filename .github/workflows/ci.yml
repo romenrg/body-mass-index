@@ -45,7 +45,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          coverage run --source=bmi --omit=__main__.py -m unittest
+          coverage run --source=bmi --omit=*main* -m unittest
           coveralls
 
 #      - name: Send coverage data to Coveralls
