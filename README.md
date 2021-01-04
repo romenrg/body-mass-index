@@ -1,5 +1,5 @@
 # Body Mass Index (BMI) - Utilities
-[![Codeship Status for romenrg/body-mass-index](https://app.codeship.com/projects/e0077cc0-7641-43c1-9cb1-1b41646a852d/status?branch=master)](https://app.codeship.com/projects/422578)
+[![Codeship Status for romenrg/body-mass-index](https://app.codeship.com/projects/e0077cc0-7641-43c1-9cb1-1b41646a852d/status?branch=master)](https://app.codeship.com/projects/422578) [![PyPI version](https://badge.fury.io/py/body-mass-index.svg)](https://badge.fury.io/py/body-mass-index) [![GitHub license](https://img.shields.io/github/license/romenrg/body-mass-index?color=blue)](https://github.com/romenrg/body-mass-index/blob/master/LICENSE)
 > Python module that provides utilities related to the Body Mass Index (BMI). Also provides a Command Line Interface (CLI). 
 
 ## Table of contents
