@@ -2,4 +2,9 @@
 *.iml
 .DS_Store
 __pycache__
+bmi/__pycache__
 *.pyc
+body_mass_index.egg-info
+body_mass_index_romenrg.egg-info
+build
+dist
