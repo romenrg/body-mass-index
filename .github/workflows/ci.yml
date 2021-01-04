@@ -40,6 +40,11 @@ jobs:
           # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
-      - name: Test with unittest
+      - name: Run tests (unittest) & calculate coverage
         run: |
-          python3 -m unittest
+          coverage run --source=bmi -m unittest
+
+      - name: Send coverage data ti Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
