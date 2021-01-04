@@ -16,11 +16,11 @@
     - [Run](#run)
 - [Contribute](#contribute)
 
-## <a name="module-usage"></a>Module usage
+## <a id="module-usage"></a>Module usage
 
 This library can be used from Python code, imported as a Python module.
 
-### <a name="install--import"></a>Install & Import
+### <a id="install--import"></a>Install & Import
 
  * Install it with pip:
     * `pip install body-mass-index`
@@ -33,7 +33,7 @@ This library can be used from Python code, imported as a Python module.
  * Now, use it.
      * E.g. `Bmi.calculate_bmi(80, 1.80)`
  
-### <a name="available-functions"></a>Available functions
+### <a id="available-functions"></a>Available functions
 
 * Two static methods:
     * `calculate_bmi`: Calculates BMI, provided weight (kg) and height (m)
@@ -50,11 +50,11 @@ This library can be used from Python code, imported as a Python module.
     * `ranges_i18n`: Text defining each BMI range, as per the WHO, in English and Spanish
    
 
-## <a name="standalone-usage"></a>Standalone usage
+## <a id="standalone-usage"></a>Standalone usage
 
 This library can also be used as a CLI utility. And it can be run both with Python or with Docker.
 
-### <a name="run-the-cli"></a>Run the CLI
+### <a id="run-the-cli"></a>Run the CLI
 
 Install it with pip.
 
@@ -70,7 +70,7 @@ Notes:
 * If no command is provided, help will be displayed
 * Example providing command with parameters `docker run -it romenrg/bmi:0.0.1 calculate 80 1.80`
 
-### <a name="available-cli-commands"></a>Available CLI commands
+### <a id="available-cli-commands"></a>Available CLI commands
 
 * `calculate_bmi`: Calculate BMI, provided weight (kg) and height (m) [info]
 * `get_bmi_range_info`: Return range info, provided BMI and language
@@ -80,19 +80,19 @@ Notes:
 * `calculate_healthy_weight`: Calculate healthy weight range (kg), provided height (m)
 
 
-## <a name="source-code-usage"></a>Source code usage
+## <a id="source-code-usage"></a>Source code usage
 
 You can also clone the repository in order to build a Docker image, run tests, execute the module locally and/or 
 contribute to keep improving this module.
 
-### <a name="build"></a>Build
+### <a id="build"></a>Build
 
 Python, as an interpreted language, doesn't have to be built, but the Docker image does.
 
 #### Create a Docker image from sources
 `docker build --tag=romenrg/bmi:0.0.1 .`
 
-### <a name="test"></a>Test
+### <a id="test"></a>Test
 
 Existing unit tests can be run in two different ways.
 
@@ -102,11 +102,11 @@ Existing unit tests can be run in two different ways.
 #### As a Docker container
 `docker run -it --entrypoint python3 romenrg/bmi:0.0.1 -m unittest`
 
-### <a name="run"></a>Run
+### <a id="run"></a>Run
 
 You can run the CLI from the source code in the same way you can when you installed it. See the [Run the CLI](#run-the-cli) section.
 
 
-## <a name="contribute"></a>Contribute
+## <a id="contribute"></a>Contribute
 
 Any contributions (i.e. PRs or issues) are welcome. Please feel free to propose changes following [the contributing guideline](https://github.com/romenrg/body-mass-index/blob/master/CONTRIBUTING.md).
