@@ -1,6 +1,6 @@
-# Calculates Body Mass Index
+# Body Mass Index (BMI) - Utilities
 [![Codeship Status for romenrg/body-mass-index](https://app.codeship.com/projects/e0077cc0-7641-43c1-9cb1-1b41646a852d/status?branch=master)](https://app.codeship.com/projects/422578)
-> Python module that provides utilities related to calculating the Body Mass Index (BMI). Also provides a Command Line Interface (CLI). 
+> Python module that provides utilities related to the Body Mass Index (BMI). Also provides a Command Line Interface (CLI). 
 
 ## Table of contents
 
@@ -10,23 +10,30 @@
 - [Standalone usage](#standalone-usage)
     - [Run the CLI](#run-the-cli)
     - [Available CLI commands](#available-cli-commands)
-- [Source code usage](#module-usage)
+- [Source code usage](#source-code-usage)
     - [Build](#build)
     - [Test](#test)
     - [Run](#run)
 - [Contribute](#contribute)
 
-## Module usage
+## <a name="module-usage"></a>Module usage
 
 This library can be used from Python code, imported as a Python module.
 
-### Install & Import
+### <a name="install--import"></a>Install & Import
 
-In order to use this library:
- * Install it with pip (consider using pipfiles to keep track of your dependencies)
- * import it in your code
+ * Install it with pip:
+    * `pip install body-mass-index`
+    * Although you might consider using `pipenv`, which creates a Pipfile to keep track of your dependencies. 
+    In that case, the install command would be:
+        * `pipenv install body-mass-index`
+ * Then, import this module in your code:
+     * `from bmi import Bmi`
+     * Note that the `Bmi` class contains all the utilities of this module
+ * Now, use it.
+     * E.g. `Bmi.calculate_bmi(80, 1.80)`
  
-### Available functions
+### <a name="available-functions"></a>Available functions
 
 * Two static methods:
     * `calculate_bmi`: Calculates BMI, provided weight (kg) and height (m)
@@ -43,11 +50,11 @@ In order to use this library:
     * `ranges_i18n`: Text defining each BMI range, as per the WHO, in English and Spanish
    
 
-## Standalone usage
+## <a name="standalone-usage"></a>Standalone usage
 
 This library can also be used as a CLI utility. And it can be run both with Python or with Docker.
 
-### Run the CLI
+### <a name="run-the-cli"></a>Run the CLI
 
 Install it with pip.
 
@@ -63,7 +70,7 @@ Notes:
 * If no command is provided, help will be displayed
 * Example providing command with parameters `docker run -it romenrg/bmi:0.0.1 calculate 80 1.80`
 
-### Available CLI commands
+### <a name="available-cli-commands"></a>Available CLI commands
 
 * `calculate_bmi`: Calculate BMI, provided weight (kg) and height (m) [info]
 * `get_bmi_range_info`: Return range info, provided BMI and language
@@ -73,19 +80,19 @@ Notes:
 * `calculate_healthy_weight`: Calculate healthy weight range (kg), provided height (m)
 
 
-## Source code usage
+## <a name="source-code-usage"></a>Source code usage
 
 You can also clone the repository in order to build a Docker image, run tests, execute the module locally and/or 
 contribute to keep improving this module.
 
-### Build
+### <a name="build"></a>Build
 
 Python, as an interpreted language, doesn't have to be built, but the Docker image does.
 
 #### Create a Docker image from sources
 `docker build --tag=romenrg/bmi:0.0.1 .`
 
-### Test
+### <a name="test"></a>Test
 
 Existing unit tests can be run in two different ways.
 
@@ -95,11 +102,11 @@ Existing unit tests can be run in two different ways.
 #### As a Docker container
 `docker run -it --entrypoint python3 romenrg/bmi:0.0.1 -m unittest`
 
-### Run
+### <a name="run"></a>Run
 
 You can run the CLI from the source code in the same way you can when you installed it. See the [Run the CLI](#run-the-cli) section.
 
 
-## Contribute
+## <a name="contribute"></a>Contribute
 
 Any contributions (i.e. PRs or issues) are welcome. Please feel free to propose changes following [the contributing guideline](https://github.com/romenrg/body-mass-index/blob/master/CONTRIBUTING.md).
