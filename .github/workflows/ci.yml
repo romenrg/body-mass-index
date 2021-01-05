@@ -47,8 +47,3 @@ jobs:
         run: |
           coverage run --source=bmi --omit=*main* -m unittest
           coveralls
-
-#      - name: Send coverage data to Coveralls
-#        uses: coverallsapp/github-action@master
-#        with:
-#          github-token: ${{ secrets.GITHUB_TOKEN }}
