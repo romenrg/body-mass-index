@@ -29,16 +29,16 @@ class Bmi:
             "es": "Sobrepeso"
         },
         3: {
-            "en": "Obese | Class I",
-            "es": "Obesidad | Clase I"
+            "en": "Obese, Class I",
+            "es": "Obesidad, Clase I"
         },
         4: {
-            "en": "Obese | Class II",
-            "es": "Obesidad | Clase II"
+            "en": "Obese, Class II",
+            "es": "Obesidad, Clase II"
         },
         5: {
-            "en": "Obese | Class III",
-            "es": "Obesidad | Clase III"
+            "en": "Obese, Class III",
+            "es": "Obesidad, Clase III"
         }
     }
 
