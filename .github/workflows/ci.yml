@@ -47,7 +47,6 @@ jobs:
           COVERALLS_SERVICE_NAME: ${{ secrets.COVERALLS_SERVICE_NAME }}
         run: |
           coverage run --source=bmi --omit=*main* -m unittest
-          coveralls
 
       - name: Submit coverage to Coveralls
         uses: coverallsapp/github-action@master
