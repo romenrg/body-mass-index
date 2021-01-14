@@ -44,6 +44,7 @@ jobs:
       - name: Run tests (unittest) & calculate coverage
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          COVERALLS_SERVICE_NAME: ${{ secrets.COVERALLS_SERVICE_NAME }}
         run: |
           coverage run --source=bmi --omit=*main* -m unittest
           coveralls
