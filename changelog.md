@@ -19,7 +19,7 @@ placeholder for the next version.
 
 ## Release Change History
 
-### [Unreleased] [1.0.1] - 2021-01-14 (Linter passing and better i18n messages)
+### [Unreleased] [1.0.2] - YYY-MM-DD (-)
 
 #### Added
 
@@ -27,7 +27,23 @@ placeholder for the next version.
 
 #### Changed
 
-* i18n messages for obesity use "," instead of "|" to clarify the type in each case
+* .
+
+#### Removed
+
+* .
+
+
+### [1.0.1] - 2021-01-15 (Flake8 linter & better i18n messages)
+
+#### Added
+
+* .
+
+#### Changed
+
+* Applied most Flake8 Linter suggestions (minor changes, such as breaking lines or adding spaces around operators)
+* Now i18n messages for obesity use "," instead of "|" to clarify the type in each case
 
 #### Removed
 
