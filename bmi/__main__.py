@@ -69,7 +69,8 @@ def cli():
     sub_cmd_calculate_weight.add_argument('bmi', metavar='bmi', type=float, nargs=1,
                                           help='Body Mass Index (BMI) value (e.g. 22)')
     sub_cmd_weight_ranges = subparsers.add_parser('calculate_weight_ranges_info',
-                                                  help='Calculate weight ranges (kg), based on BMI ranges; provided height (m)')
+                                                  help='Calculate weight ranges (kg), based on BMI ranges; '
+                                                       'provided height (m)')
     sub_cmd_weight_ranges.set_defaults(func=execute_calculate_weight_ranges_info)
     sub_cmd_weight_ranges.add_argument('height', metavar='height', type=float, nargs=1,
                                        help='height in meters (e.g. 1.80)')
