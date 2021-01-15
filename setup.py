@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="body-mass-index",
-    version="1.0.0",
+    version="1.0.1",
     author="Romen Rodriguez-Gil",
     author_email="contact@romenrg.com",
     description="Utilities related to the Body Mass Index (BMI): Calculating it, calculating healthy weight, ranges, " +
