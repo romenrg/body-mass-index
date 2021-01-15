@@ -4,11 +4,13 @@ import pprint
 
 from bmi import Bmi
 
+
 def execute_calculate_bmi(args):
     if args.info:
         return Bmi.calculate_bmi_with_info(args.weight[0], args.height[0], args.info)
     else:
         return Bmi.calculate_bmi(args.weight[0], args.height[0])
+
 
 def execute_get_bmi_range_info(args):
     if args.lang:
@@ -16,20 +18,26 @@ def execute_get_bmi_range_info(args):
     else:
         return Bmi.get_bmi_range_info(args.bmi[0])
 
+
 def execute_get_bmi_ranges_with_info(args):
     return Bmi.get_bmi_ranges_with_info(args.lang)
+
 
 def execute_calculate_weight(args):
     return Bmi.calculate_weight(args.height[0], args.bmi[0])
 
+
 def execute_calculate_weight_ranges_info(args):
     return Bmi.calculate_weight_ranges_with_info(args.height[0], args.lang)
+
 
 def execute_calculate_healthy_weight(args):
     return Bmi.calculate_healthy_weight(args.height[0])
 
+
 def subparser_is_enabled(args):
     return (len(sys.argv) > 1) and (hasattr(args, 'func'))
+
 
 def cli():
     parser = argparse.ArgumentParser(description='BMI', prog='python3 -m bmi', usage='%(prog)s')
