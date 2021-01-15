@@ -81,5 +81,3 @@ class TestHello(unittest.TestCase):
 
     def test_calculate_healthy_weight(self):
         self.assertEqual(Bmi.calculate_healthy_weight(1.80), [59.9, 81])
-
-
