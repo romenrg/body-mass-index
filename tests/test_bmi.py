@@ -1,6 +1,7 @@
 import unittest
 from bmi import Bmi
 
+
 class TestHello(unittest.TestCase):
     def test_ranges(self):
         self.assertEqual(Bmi.boundaries, [0, 18.5, 25, 30, 35, 40])
