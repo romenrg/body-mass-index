@@ -47,7 +47,7 @@ class Bmi:
     def calculate_bmi(weight_kg, height_m):
         exact_value = weight_kg / pow(height_m, 2)
         rounded_value = round(exact_value, 1)
-        logger.debug("Calculated BMI: Exact value: "+ str(exact_value) + "; Rounded value: "+ str(rounded_value))
+        logger.debug("Calculated BMI: Exact value: " + str(exact_value) + "; Rounded value: " + str(rounded_value))
         return rounded_value
 
     @classmethod
