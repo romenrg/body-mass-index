@@ -1,5 +1,5 @@
 # Body Mass Index (BMI) - Utilities
-![CI - Linter & tests](https://github.com/romenrg/body-mass-index/workflows/CI%20-%20Linter%20%26%20tests/badge.svg) 
+[![CI - Linter & tests](https://github.com/romenrg/body-mass-index/workflows/CI%20-%20Linter%20%26%20tests/badge.svg) ](https://github.com/romenrg/body-mass-index/actions?query=workflow%3A%22CI+-+Linter+%26+tests%22)
 [![Coverage Status](https://coveralls.io/repos/github/romenrg/body-mass-index/badge.svg?branch=master)](https://coveralls.io/github/romenrg/body-mass-index?branch=master) 
 [![PyPI version](https://badge.fury.io/py/body-mass-index.svg)](https://badge.fury.io/py/body-mass-index) 
 [![GitHub license](https://img.shields.io/github/license/romenrg/body-mass-index?color=blue)](https://github.com/romenrg/body-mass-index/blob/master/LICENSE)
