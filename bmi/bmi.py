@@ -4,6 +4,7 @@ from os import path
 logger = logging.getLogger('bmi')
 logging.config.fileConfig(str(path.dirname(path.realpath(__file__))) + '/logging_config.ini')
 
+
 class Bmi:
 
     boundaries = [
