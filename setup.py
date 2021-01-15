@@ -8,7 +8,8 @@ setuptools.setup(
     version="1.0.0",
     author="Romen Rodriguez-Gil",
     author_email="contact@romenrg.com",
-    description="Utilities related to the Body Mass Index (BMI): Calculating it, calculating healthy weight, ranges, boundaries,...",
+    description="Utilities related to the Body Mass Index (BMI): Calculating it, calculating healthy weight, ranges, " +
+                "boundaries,...",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/romenrg/body-mass-index",

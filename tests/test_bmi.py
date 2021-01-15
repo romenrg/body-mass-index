@@ -1,6 +1,7 @@
 import unittest
 from bmi import Bmi
 
+
 class TestHello(unittest.TestCase):
     def test_ranges(self):
         self.assertEqual(Bmi.boundaries, [0, 18.5, 25, 30, 35, 40])
@@ -80,5 +81,3 @@ class TestHello(unittest.TestCase):
 
     def test_calculate_healthy_weight(self):
         self.assertEqual(Bmi.calculate_healthy_weight(1.80), [59.9, 81])
-
-
