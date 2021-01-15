@@ -90,8 +90,8 @@ class Bmi:
     def calculate_weight(height_m, bmi):
         weight = bmi * pow(height_m, 2)
         rounded_weight = round(weight, 1)
-        logger.debug("Inputs are height: "+ str(height_m) + " and bmi: "+ str(bmi))
-        logger.debug("Exact weight value is: "+ str(weight) + "; And rounded weight: "+ str(rounded_weight))
+        logger.debug("Inputs are height: " + str(height_m) + " and bmi: " + str(bmi))
+        logger.debug("Exact weight value is: " + str(weight) + "; And rounded weight: " + str(rounded_weight))
         return rounded_weight
 
     @classmethod
@@ -110,20 +110,20 @@ class Bmi:
     def calculate_weight_ranges_with_info(cls, height_m, lang="en"):
         weight_boundaries = cls.calculate_weight_boundaries(height_m)
         detailed_weight_boundaries = []
-        logger.debug("Ranges weight boundaries information for height: "+ str(height_m))
+        logger.debug("Ranges weight boundaries information for height: " + str(height_m))
         for i, boundary in enumerate(weight_boundaries):
             if i + 1 < len(weight_boundaries):
                 detailed_weight_boundaries.append({"From": boundary, "To": weight_boundaries[i + 1],
                                                    "Info": cls.ranges_i18n[i][lang]})
-                logger.debug("From: " + str(boundary) + "; To: "+ str(weight_boundaries[i + 1]) +
-                             "; Info: "+ cls.ranges_i18n[i][lang])
+                logger.debug("From: " + str(boundary) + "; To: " + str(weight_boundaries[i + 1]) +
+                             "; Info: " + cls.ranges_i18n[i][lang])
             else:
                 detailed_weight_boundaries.append({"From": boundary, "To": "", "Info": cls.ranges_i18n[i][lang]})
-                logger.debug("From: " + str(boundary) + "; To: " + "; Info: "+ cls.ranges_i18n[i][lang])
+                logger.debug("From: " + str(boundary) + "; To: " + "; Info: " + cls.ranges_i18n[i][lang])
         return detailed_weight_boundaries
 
     @classmethod
     def calculate_healthy_weight(cls, height_m):
         your_weight_boundaries = (cls.calculate_weight_boundaries(height_m))[1:3]
-        logger.debug("For height: "+ str(height_m) + ", your healthy boundaries are: "+ str(your_weight_boundaries))
+        logger.debug("For height: " + str(height_m) + ", your healthy boundaries are: " + str(your_weight_boundaries))
         return your_weight_boundaries
