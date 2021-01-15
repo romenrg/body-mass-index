@@ -77,8 +77,10 @@ class Bmi:
         logger.debug("Ranges with information")
         for i, boundary in enumerate(cls.boundaries):
             if i + 1 < len(cls.boundaries):
-                detailed_ranges.append({"From": boundary, "To": cls.boundaries[i + 1], "Info": cls.get_bmi_range_info(boundary, lang)})
-                logger.debug("From: " + str(boundary) + "; To: " + str(cls.boundaries[i + 1]) + "; Info: " + cls.get_bmi_range_info(boundary, lang))
+                detailed_ranges.append({"From": boundary, "To": cls.boundaries[i + 1],
+                                        "Info": cls.get_bmi_range_info(boundary, lang)})
+                logger.debug("From: " + str(boundary) + "; To: " + str(cls.boundaries[i + 1]) +
+                             "; Info: " + cls.get_bmi_range_info(boundary, lang))
             else:
                 detailed_ranges.append({"From": boundary, "To": "", "Info": cls.get_bmi_range_info(boundary, lang)})
                 logger.debug("From: " + str(boundary) + "; To: " + "; Info: " + cls.get_bmi_range_info(boundary, lang))
@@ -111,8 +113,10 @@ class Bmi:
         logger.debug("Ranges weight boundaries information for height: "+ str(height_m))
         for i, boundary in enumerate(weight_boundaries):
             if i + 1 < len(weight_boundaries):
-                detailed_weight_boundaries.append({"From": boundary, "To": weight_boundaries[i + 1], "Info": cls.ranges_i18n[i][lang]})
-                logger.debug("From: " + str(boundary) + "; To: "+ str(weight_boundaries[i + 1]) + "; Info: "+ cls.ranges_i18n[i][lang])
+                detailed_weight_boundaries.append({"From": boundary, "To": weight_boundaries[i + 1],
+                                                   "Info": cls.ranges_i18n[i][lang]})
+                logger.debug("From: " + str(boundary) + "; To: "+ str(weight_boundaries[i + 1]) +
+                             "; Info: "+ cls.ranges_i18n[i][lang])
             else:
                 detailed_weight_boundaries.append({"From": boundary, "To": "", "Info": cls.ranges_i18n[i][lang]})
                 logger.debug("From: " + str(boundary) + "; To: " + "; Info: "+ cls.ranges_i18n[i][lang])
